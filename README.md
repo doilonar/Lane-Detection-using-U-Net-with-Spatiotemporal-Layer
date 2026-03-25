@@ -44,28 +44,28 @@ This is a standard U-Net architecture designed for semantic segmentation.
 -   **Loss Function**: Uses `BinaryFocalLoss` to address the imbalance between the lane pixels and the background.
 -   **Training**: The `run_unet.py` script uses a data generator to feed images and corresponding masks to the model.
 ### Accuracy Binary Focal Loss
-![Accuracy](https://github.com/user-attachments/assets/65905bbd-3a0a-463b-9a96-c32a39d4193b)
+![Accuracy](images/ABFL.png)
 ### Compared Binary Focal Loss
-![Compared](https://github.com/user-attachments/assets/19bd1bd0-edb0-4ec7-83f2-4107568f7cc9)
+![Compared](images/CBIFL.png)
 ### Loss Binary Focal Loss
-![Loss](https://github.com/user-attachments/assets/bb103422-44d2-4d46-a567-f01b18250b58)
+![Loss](images/LBLF.png)
 ### 3. U-Net with ConvLSTM (`unet_lstm/`)
 This model enhances the standard U-Net by adding `ConvLSTM2D` layers in the bottleneck. This allows the model to learn spatiotemporal features from sequential frames in a video, improving temporal consistency.
 -   **Architecture**: Integrates two `ConvLSTM2D` layers between the encoder and decoder paths.
 -   **Loss Function**: Utilizes an `iou_loss` (1 - IoU), which directly optimizes the Intersection over Union metric. This is highly effective for segmentation tasks.
 -   **Metric**: The model is evaluated using the `iou` metric.
 ### Accuracy IoU Loss
-![Accuracy IoU Loss](https://github.com/user-attachments/assets/be6ff3a1-e1e1-49f1-b382-4d973209578b)
+![Accuracy IoU Loss](images/AIL.png)
 ### Compared IoU Loss
-![Compared IoU Loss](https://github.com/user-attachments/assets/82d07aef-f242-482d-b5c2-af95b807e81a)
+![Compared IoU Loss](images/CIO.png)
 ### Loss IoU Loss
-![Loss IoU Loss](https://github.com/user-attachments/assets/009f6fc6-4f2d-4caf-9841-4a6dba9d103c)
+![Loss IoU Loss](images/LIL.png)
 
 ### Accuracy LSTM Integration
-![Accuracy LSTM Integration](https://github.com/user-attachments/assets/3abaa68e-fefe-4405-a6fd-da09fccf0ec9)
+![Accuracy LSTM Integration](images/ALI.png)
 
 ### Loss LSTM Integration
-![Loss LSTM Integration](https://github.com/user-attachments/assets/1dbd6bdb-e2b5-492b-85b6-f39be030060f)
+![Loss LSTM Integration](images/LIL.png)
 ## How to Use
 
 ### Prerequisites
@@ -120,8 +120,8 @@ The `video_unet.py` script processes a video file frame by frame, overlays the p
     ```
 
 ### Without LSTM Integration
-![Without LSTM Integration](https://github.com/user-attachments/assets/17c628cf-bbd6-40b0-adc8-0f9f6c63602f)
+![Without LSTM Integration](images/WLI.png)
 ### With LSTM Integration
-![With LSTM Integration](https://github.com/user-attachments/assets/6cd5526f-cf9e-4a04-a61e-1b8895eb1a99)
+![With LSTM Integration](images/LI.png)
 ### Research Paper
 https://ieeexplore.ieee.org/abstract/document/11105626
