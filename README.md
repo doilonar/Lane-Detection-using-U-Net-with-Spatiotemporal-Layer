@@ -46,9 +46,9 @@ This is a standard U-Net architecture designed for semantic segmentation.
 ### Accuracy Binary Focal Loss
 ![Accuracy](images/ABFL.png)
 ### Compared Binary Focal Loss
-![Compared](images/CBIFL.png)
+![Compared](images/CBFL.png)
 ### Loss Binary Focal Loss
-![Loss](images/LBLF.png)
+![Loss](images/LBFL.png)
 ### 3. U-Net with ConvLSTM (`unet_lstm/`)
 This model enhances the standard U-Net by adding `ConvLSTM2D` layers in the bottleneck. This allows the model to learn spatiotemporal features from sequential frames in a video, improving temporal consistency.
 -   **Architecture**: Integrates two `ConvLSTM2D` layers between the encoder and decoder paths.
